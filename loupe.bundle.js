@@ -96,9 +96,9 @@ module.exports = React.createClass({displayName: 'exports',
           React.DOM.div(null, 
             React.DOM.div({className: "flexContainer"}, 
               React.DOM.nav({className: "top-nav"}, 
-                React.DOM.button({className: "settings-button", onClick: this.toggleSettings}, "⚒"), 
-                React.DOM.h1(null, "loupe"), 
-                React.DOM.a({className: "modal-button", onClick: this.openModal}, "help")
+                //React.DOM.button({className: "settings-button", onClick: this.toggleSettings}, "⚒"), 
+                React.DOM.h1(null, "Event Loop"), 
+                //React.DOM.a({className: "modal-button", onClick: this.openModal}, "help")
               ), 
               React.DOM.div({className: "flexChild rowParent"}, 
                 SettingsPanel({open: this.state.settingsOpen}), 
@@ -136,7 +136,7 @@ module.exports = React.createClass({displayName: 'exports',
             ), 
 
             Modal({
-                isOpen: this.state.modalOpen, 
+                isOpen: false, 
                 onRequestClose: this.closeModal}, 
 
                 React.DOM.a({className: "modalClose", onClick: this.closeModal}, "close"), 
